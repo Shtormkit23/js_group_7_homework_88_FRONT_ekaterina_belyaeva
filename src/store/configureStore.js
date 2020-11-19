@@ -1,6 +1,5 @@
 import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import {createBrowserHistory} from "history";
-import musicReducer from "./reducers/musicReducer";
 import usersReducer from "./reducers/usersReducer";
 import {connectRouter, routerMiddleware} from "connected-react-router";
 import thunkMiddleware from "redux-thunk";
@@ -11,7 +10,6 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export const history = createBrowserHistory();
 
 const rootReducer = combineReducers({
-    music: musicReducer,
     users: usersReducer,
     router: connectRouter(history)
 });
