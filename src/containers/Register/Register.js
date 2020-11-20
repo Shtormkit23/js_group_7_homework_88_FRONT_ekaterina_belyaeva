@@ -13,8 +13,6 @@ import Container from '@material-ui/core/Container';
 import {registerUser} from "../../store/actions/usersActions";
 import FormElement from "../../components/Form/FormElement";
 
-
-
 const useStyles = makeStyles((theme) => ({
     paper: {
         marginTop: theme.spacing(8),
@@ -53,6 +51,7 @@ const Register = () => {
             return {...prevState, [name]: value};
         });
     };
+
     const formSubmitHandler = e => {
         e.preventDefault();
         dispatch(registerUser({...state}));
