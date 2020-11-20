@@ -47,7 +47,7 @@ const UserMenu = ({user}) => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem>Add new post</MenuItem>
+                <MenuItem><a href="/new_post" className='button' ><span>Add new post</span></a></MenuItem>
                 <MenuItem onClick={logout}>Logout</MenuItem>
             </Menu>
         </>
