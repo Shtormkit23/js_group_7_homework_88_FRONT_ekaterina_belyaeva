@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 import Container from "@material-ui/core/Container";
 import UserMenu from "../Menu/UserMenu";
 import AnonymousMenu from "../Menu/AnonymousMenu";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles(theme => ({
   mainLink: {
@@ -49,6 +50,10 @@ const AppToolbar = ({user}) => {
       <Toolbar className={classes.staticToolbar}/>
     </>
   );
+};
+
+AppToolbar.propTypes = {
+  user: PropTypes.object.isRequired
 };
 
 export default AppToolbar;
